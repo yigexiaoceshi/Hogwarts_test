@@ -4,7 +4,7 @@ from typing import List
 
 import allure
 import pytest
-from homework_pytest.calculate.calculate import Calculate
+from homework.homework_pytest.calculate.calculate import Calculate
 
 #计算器每条用例都需要初始化被测类对象，使用fixture做优化，调用时，在调用函数中传入当前方法名称即可
 @pytest.fixture()
