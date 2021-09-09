@@ -6,18 +6,27 @@ import yaml
 from homework.homework_PO_webauto_test.PageObject_company_wechat.page_home import PageHome
 
 def get_datas():
-    with open("/Users/liyong/Desktop/study/homework/homework_PO_webauto_test/test_company_wechat/member_list_data.yaml") as file:
+    with open("member_list_data.yaml") as file:
         datas = yaml.safe_load(file)
         my_data = datas.get("datas").get("data")
         my_ids = datas.get("datas").get("ids")
+        my_datafail = datas.get("datas").get("datafail")
+        my_idsfail = datas.get("datas").get("idsfail")
+        my_assertfail = datas.get("datas").get("assertfail")
         print(datas)
         print(my_data)  #返回一个列表嵌套列表
         print(my_ids)   #返回一个列表
-        return (my_data,my_ids)
+        return (my_data,my_ids,my_datafail,my_idsfail,my_assertfail)
 
-#定义一个方法，使datas数组里的用例按照一组一组传入
+#定义一个方法，获取成功的用例，使datas数组里的用例按照一组一组传入
 @pytest.fixture(params=get_datas()[0],ids=get_datas()[1])
 def get_datas_byfixture(request):
+    print(f"request.param：{request.param}")
+    return request.param
+
+#定义一个方法，获取失败的用例，使datas数组里的用例按照一组一组传入
+@pytest.fixture(params=get_datas()[2],ids=get_datas()[3])
+def get_datasfail_byfixture(request):
     print(f"request.param：{request.param}")
     return request.param
 
@@ -30,9 +39,7 @@ class TestAddMember:
         assert get_datas_byfixture[2] in members
 
     #测试用例2：添加成员失败
-    def test_addmember_fail(self):
-        pass
-
-
-    #用例3：获取成员列表
-    # def
+    def test_addmember_fail(self,get_datasfail_byfixture):
+        page_home = PageHome()
+        text_assert = page_home.pagehome_go_to_addmember().addmember_fail(get_datasfail_byfixture[0],get_datasfail_byfixture[1],get_datasfail_byfixture[2])
+        assert get_datasfail_byfixture[3] in text_assert

@@ -22,6 +22,3 @@ class PageBase():
             self.br.get("https://work.weixin.qq.com/wework_admin/frame")
         else:
             self.br = son_br
-
-    def teardown(self):
-        self.br.quit()

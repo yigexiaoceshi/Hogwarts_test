@@ -33,8 +33,13 @@ class PageContact(PageBase):
         2、所以只能每个页面获取到对象后，优先把text提取出来塞到members里即可
         :return:
         """
+        sleep(1)
+        page_number = self.br.find_element(By.CSS_SELECTOR,'.ww_pageNav_info_text').text
+        print(page_number)
+        n = int(page_number[2:])
+        # print(type(n))
         members = []
-        for i in range(1,4):
+        for i in range(1,n+1):
             # buttom_left = self.br.execute_script("return document.querySelector('.js_pre_page')")
             buttom_right = self.br.execute_script("return document.querySelector('.js_next_page')")
             if i == 1:

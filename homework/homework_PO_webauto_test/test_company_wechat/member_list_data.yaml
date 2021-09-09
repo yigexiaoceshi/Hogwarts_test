@@ -1,4 +1,7 @@
 datas:
   data:
-    - ["姓名010","zhanghao010","17673490010"]
-  ids: ["case10"]
+    - ["姓名051","zhanghao051","17673490051"]
+  ids: ["case51"]
+  datafail:
+    - ["姓名050","zhanghao050","17673490050","该账号已被"]
+  idsfail: ["case50"]

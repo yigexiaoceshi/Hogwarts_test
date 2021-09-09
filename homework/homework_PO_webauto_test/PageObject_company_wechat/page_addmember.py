@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # -*- coding:utf-8 -*-
+from time import sleep
 from selenium.webdriver.common.by import By
 from homework.homework_PO_webauto_test.PageObject_company_wechat.page_base import PageBase
 from homework.homework_PO_webauto_test.PageObject_company_wechat.page_contact import PageContact
@@ -19,5 +20,17 @@ class PageAddMember(PageBase):
         return PageContact(self.br)
 
     #添加成员页面，方法3：添加成员失败，停留在当前页面
-    def addmember_fail(self):
-        return
+    def addmember_fail(self,username,account,phone):
+        self.br.find_element(By.ID,'username').send_keys(username)
+        self.br.find_element(By.ID,'memberAdd_acctid').send_keys(account)
+        self.br.find_element(By.ID,'memberAdd_phone').send_keys(phone)
+        # sleep(1)
+        error_message1 = self.br.find_element(By.XPATH,'//div[contains(text(), "该帐号已被")]').text
+        print(error_message1)
+        self.br.find_element(By.CSS_SELECTOR,'.js_btn_save').click()
+        # sleep(1)
+        error_message2 = self.br.find_element(By.XPATH,'//div[contains(text(), "该手机已被")]').text
+        print(error_message2)
+        self.br.find_element(By.CSS_SELECTOR,'.js_btn_cancel').click()
+        text_assert = error_message1,error_message2
+        return text_assert
