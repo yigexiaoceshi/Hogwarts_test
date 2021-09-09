@@ -9,7 +9,7 @@ class TestAddMember:
 
     # 测试用例1：添加成员正常流程
     @allure.story("添加成员成功")
-    def test_addmember_success(self, setup_teardown, get_datas_byfixture):
+    def test_add_member_success(self, setup_teardown, get_datas_byfixture):
         phone_list = setup_teardown.pagehome_go_to_addmember().addmember_success(get_datas_byfixture[0],
                                                                                  get_datas_byfixture[1],
                                                                                  get_datas_byfixture[2]).get_members(
@@ -18,7 +18,7 @@ class TestAddMember:
 
     # 测试用例2：添加成员失败
     @allure.story("添加成员失败")
-    def test_addmember_fail(self, setup_teardown, get_datasfail_byfixture):
+    def test_add_member_fail(self, setup_teardown, get_datasfail_byfixture):
         text_assert = setup_teardown.pagehome_go_to_addmember().addmember_fail(get_datasfail_byfixture[0],
                                                                                get_datasfail_byfixture[1],
                                                                                get_datasfail_byfixture[2])
