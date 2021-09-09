@@ -7,7 +7,9 @@ from selenium.webdriver.remote.webdriver import WebDriver
 
 #定义一个父类
 class PageBase():
-    def __init__(self,son_br: WebDriver=None):
+
+    #实例化浏览器时，会调用该构造函数，子类没有定义会直接调用父类的
+    def __init__(self,son_br: WebDriver=None):  #默认值为None
         if son_br == None:
             self.br = webdriver.Chrome()
             self.br.maximize_window()

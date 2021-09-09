@@ -8,10 +8,10 @@ from homework.homework_PO_webauto_test.PageObject_company_wechat.page_contact im
 
 # 企业微信_首页，定义一个类
 class PageHome(PageBase):
+
     # 首页，方法1：点击【通讯录】跳转到通讯录页面
     def pagehome_go_to_pagecontact(self):
         self.br.find_element(By.ID,'menu_contacts').click()
-        sleep(1)
         return PageContact(self.br)
 
     # 首页，方法2：点击【添加成员】跳转添加成员页面

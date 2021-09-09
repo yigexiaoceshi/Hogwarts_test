@@ -31,7 +31,7 @@ class TestGetCookie:
         self.brower.get("https://work.weixin.qq.com/wework_admin/loginpage_wx?from=myhome_baidu")
         #读取cookie.yaml文件，my_cookies得到一个列表
         my_cookies = yaml.safe_load(open("/Users/liyong/Desktop/study/homework/homework_PO_webauto_test/get_cookie/cookie.yaml"))
-        #轮询列表，依次将列表所有元素尝试添加至浏览器
+        #轮循列表，依次将列表所有元素尝试添加至浏览器
         for my_cookie in my_cookies:
             self.brower.add_cookie(my_cookie)
         #再次打开企业微信已登录页面，实现无需再次扫码登录成功
