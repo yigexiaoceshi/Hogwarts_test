@@ -3,10 +3,10 @@
 book = {'书名': '《三体》', '价格': 16.0, '作者': '刘慈欣', '出版社': 'XXX出版社'}
 print("*" * 20, "获取字典所有的key", "*" * 20)
 for i in book:
-    print(i, end="  ")  # 直接遍历字典，取出来的是key
+    print(i)  # 直接遍历字典，取出来的是key
 # 等同于：
 for j in book.keys():
-    print("\n", j, end="  ")
+    print(j)
 print(book.keys())
 print(list(book.keys()))
 
