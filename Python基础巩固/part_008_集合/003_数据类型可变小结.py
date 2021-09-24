@@ -49,3 +49,19 @@ k = {"name": "李勇", "sex": "男"}
 l = {"name": "李勇", "sex": "男"}
 print(id(k))
 print(id(l))
+
+
+"""
+总结：
+1、按照储存对象多少：
+    单个：数字（number）、字符串（string）
+    多个：列表（list）、元组（tuple）、集合（set）、字典（dict）
+    两个：布尔值（bool）
+2、按照数据类型是否可变：
+    可变（不可hash）：列表（list）、字典（dict）、集合（set）、布尔值（bool）
+    不可变（可hash）：数字（number）、字符串（string）、元组（tuple）
+3、按照访问方式
+    通过"索引"访问：字符串（string）、列表（list）、元组（tuple）
+    通过"key"访问：字典（dict）
+    无序：集合（set）
+"""

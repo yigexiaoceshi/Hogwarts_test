@@ -41,3 +41,37 @@ xx = dict.fromkeys(["a", "b"], 10)
 print(xx)
 yy = dict.fromkeys(("a", "b"), ["fsfs", 3234, True])
 print(yy)
+
+print("*" * 20, "字典转列表：list(dict)，将dict里的键转为了列表", "*" * 20)
+dict_person = {"name": "张三", "age": 19, "sex": "男"}
+print(list(dict_person))
+
+print("*" * 20, "字典转元组：tuple(dict)，将dict里的键转为了元组", "*" * 20)
+print(tuple(dict_person))
+
+print("*" * 20, "字典转集合：set(dict)，将dict里的键转为了集合", "*" * 20)
+print(set(dict_person))
+
+print("*" * 20, "列表转字典：dict(list)，特定的格式才可以转", "*" * 20)
+# 列表或者元组转字典的时候，元素必须全部刚好是元组内防止2个元素，且第一个元素必须为不可变数据类型，比如
+list_a = [["a", 10], ["b", 20], ["c", 30]]  # 转为字典会报错
+list_b = [("a", 10), ("b", 20), ("c", 30)]
+list_c = [{"a": 10}, {"b": 20}, {"c": 30}]  # 转为字典会报错
+# print(dict(list_a))  # 报错
+print(dict(list_b))
+# print(dict(list_c))  # 报错
+
+print("*" * 20, "元组转字典：dict(tuple)，特定的格式才可以转", "*" * 20)
+# 列表或者元组转字典的时候，元素必须全部刚好是元组内防止2个元素，且第一个元素必须为不可变数据类型，比如
+tuple_a = (["a", 10], ["b", 20], ["c", 30])  # 转为字典会报错
+tuple_b = (("a", 10), ("b", 20), ("c", 30))
+tuple_c = ({"a": 10}, {"b": 20}, {"c": 30})  # 转为字典会报错
+# print(dict(tuple_a))  # 报错
+print(dict(tuple_b))
+# print(dict(tuple_c))  # 报错
+
+print("*" * 20, "集合转字典：dict(tuple)，特定的格式才可以转", "*" * 20)
+# 列表或者元组转字典的时候，元素必须全部刚好是元组内防止2个元素，且第一个元素必须为不可变数据类型，比如
+set_b = {("a", 10), ("b", 20), ("c", 30)}
+print(dict(set_b))
+
