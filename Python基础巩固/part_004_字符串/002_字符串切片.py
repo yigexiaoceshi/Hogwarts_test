@@ -40,5 +40,5 @@ print("变量e中取所有元素：", e[::])  # 默认step是1，可省略
 start_index 到 end_index的方向，和step（正数-从左至右；负数-从右至左）的方向必须一致
 
 """
-print("翻转字符串e：", e[::-1])  # step为整数，从左至右取值，step为负数，从右至左取值，所以注意start_index和end_index的位置
+print("翻转字符串e：", e[::-1])  # step为正数，从左至右取值，step为负数，从右至左取值，所以注意start_index和end_index的位置
 print("翻转字符串e：", e[0:-1:-1])  # 从0开始依次index-1，取不到值

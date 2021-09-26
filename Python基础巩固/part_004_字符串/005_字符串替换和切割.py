@@ -30,7 +30,7 @@ print("*" * 20, "str.title()：每个单词首字母大写", "*" * 20)
 e = "hello world"
 print('每个单词首字母大写：', e.title())
 
-print("*" * 20, "str.capitalize())：第一个单词首字母大写", "*" * 20)
+print("*" * 20, "str.capitalize()：第一个单词首字母大写", "*" * 20)
 f = "hello world"
 print('第一个单词首字母大写：', f.capitalize())
 

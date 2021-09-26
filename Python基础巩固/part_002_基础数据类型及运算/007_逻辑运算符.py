@@ -9,8 +9,8 @@ not :
 a = 1
 b = 3
 c = 0
-# 两侧都是数字时进行逻辑运算时
-print(a and b)  # and两侧都为真，输出后面的值，仅一侧为真时，输入True的那个值
+# 两侧都是数字或字符串时时进行逻辑运算时
+print(a and b)  # and两侧都为真，输出后面的值，仅一侧为真时，输出0
 print(a and c)  # and两侧只要一侧出现0，输出0
 print(a or c)  # or两侧出现一个0，输出True的值，两侧都是True时，输出第一个True(此时已经得出结果，不需要看or后面的是否真假)
 print(a or b)  # or两侧都是True，输出第一个True的值
@@ -27,4 +27,6 @@ print(a == 1 or b == 3 and c != 0)  # 同理，先计算and，得出的结果Fal
 print(a == 1)  # 返回True
 print(not a == 1)  # 返回False
 
-
+print("*"*60)
+print("" or 0)
+print(type(0 and False))

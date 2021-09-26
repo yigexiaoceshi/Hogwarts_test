@@ -11,3 +11,15 @@
 **= :
 %= :
 """
+a = 1
+b = 2
+c = 3
+print(id(a))
+print(id(b))
+print(id(c))
+print(a,b,c)
+c += b
+print(id(a))
+print(id(b))
+print(id(c))
+print(a,b,c)
