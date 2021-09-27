@@ -49,8 +49,8 @@ books = [{'书名': '《三体》', '价格': 16.0}, {'书名': '《三毛流浪
 for i in books:
     if "价格" in i.keys():
         print("子元素字典中存在'价格'这个key！")
-        i.pop("价格")
-        print("'价格'删除成功！")
+        result = i.pop("价格")
+        print("'价格'删除成功，返回值为对应的value：", result)
     else:
         print("子元素字典中没有'价格'这个key！")
 print(books)
