@@ -36,4 +36,7 @@ username6 = ("你好", "国庆节", "要放假了", "我很高兴啊")
 username7 = "123"
 username8 = "admin"
 print(username8.join(username6))  # 传入的参数可以是字符串，可以是list或者tuple或者set或者dictionary
-print(username8.join(username7))  # 传入的参数元素与元素之间插入一个该字符串
+print(username8.join(username7))  # 用字符串username8连接username7里的所有元素
+print("###".join("aabb"))
+print("$$".join(["40", "50", "60"]))
+print("".join(["40", "50", "60"]))
