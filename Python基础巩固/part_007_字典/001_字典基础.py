@@ -36,3 +36,11 @@ book["出版社"] = "XXX出版社"
 print(book)
 book["价格"] *= 0.8
 print(book)
+
+dict3 = {"name": "老李", "age": 17, "sex": "男"}
+if "name" in dict3:  # 使用in dict语法时，字典会取出所有的key进行比较，相当于in dict.keys()
+    print("'name'在字典dict3里！")
+elif "老李" in dict3:
+    print("'老李'在字典dict3里！")
+else:
+    print("'name'和'老李'都不在字典dict3里！")

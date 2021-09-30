@@ -41,3 +41,17 @@ aa = True
 # print(aa)
 aa = False  # 此处变量名前面的警告黄色，表明已经申明过一个相同的变量名，并且还未使用，只要使用一次，警告就会消失
 print(type(aa))
+
+a, b = 1, 2
+print("a,b的值为：", a, b)
+a, b = b, a
+print("a和b交换位置之后的值为：", a, b)
+c, d = [11, 22]
+print("c和d分别从列表赋值：", c, d)
+e, f = (33, 44)
+print("e和f分别从元组赋值：", e, f)
+g, h = {55, 66}
+print("g和h分别从集合赋值：", g, h)  # 顺序不固定
+k, v = {"aaa": 123, "bbb": 456}
+print("k和v分别从字典赋值：", k, v)  # 仅赋值key
+
