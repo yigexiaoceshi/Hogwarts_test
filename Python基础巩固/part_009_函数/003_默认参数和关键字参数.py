@@ -35,10 +35,11 @@ def remove_element(list_list):
     # 定义起始索引
     n = 0
     while n < len(list_list):
-        list_list.remove(list_list[n])
-    else:
-        n += 1
+        if list_list[n] < 50:
+            list_list.remove(list_list[n])
+        else:
+            n += 1
     print(list_list)
 
 
-print(list_a)  # list_list和list_a指向的是同一个内存地址，操作的是同一个列表
+remove_element(list_a)  # list_list和list_a指向的是同一个内存地址，操作的是同一个列表

@@ -12,7 +12,7 @@
 
 注：
 1、一个代码分支里只能有一个有效return
-2、出现return，停止执行后续代码，可以用来终止循环或者函数调用
+2、出现return，停止执行后续代码，可以用来跳出循环并且 终止函数调用
 """
 
 
@@ -21,6 +21,7 @@ def get_sum(*args):
     for i in args:
         totle += i
     return totle  # 返回值仅代表存在内存空间，所以函数体外一定要有变量去接收这个存放值的空间，这个值才可以给到外界使用
+
 
 list1 = [i for i in range(1, 101)]
 print(get_sum(*list1))
