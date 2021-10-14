@@ -69,4 +69,4 @@ def hotel(address, name, area=40):
     print("位于{}的{}，每个房间的面积是{}".format(address, name, area))
 
 
-hotel("西湖风景名胜区", "西湖大酒店", area=99)
+hotel("西湖风景名胜区", "全季酒店", area=99)  # 使用了关键字参数传参，装饰器参数的内部参数必须加**kwargs参数
