@@ -31,6 +31,7 @@ class TestGetCookie:
 
     # 方法2：从yaml文件里提取cookie，植入浏览器，实现无需扫码登录
     def test_add_cookie(self):
+        # 打开企业微信扫码登录页面
         self.brower.get("https://work.weixin.qq.com/wework_admin/loginpage_wx?from=myhome_baidu")
         # 读取cookie.yaml文件，my_cookies得到一个列表
         my_cookies = yaml.safe_load(
