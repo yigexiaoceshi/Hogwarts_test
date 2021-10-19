@@ -6,7 +6,7 @@
 遵循：
 1、要有出口，即终止条件
 2、每递归一次向出口靠近
-3、
+3、一般入口是传入的参数
 """
 
 # 函数内部调用其他函数
@@ -120,11 +120,11 @@ print("\n", "*" * 25, "示例3：递归函数实现斐波那契数列", "*" * 25
 list = []
 
 
-def fb(n):
-    for i in range(n):
-        if i == 0:
+def fb(n):  # 传入的参数n定义了需要几个数
+    for i in range(n):  # 根据传入的参数n定义n次循环
+        if i == 0:  # 第一次循环，第一个数定义为0
             list.append(0)
-        elif i == 1:
+        elif i == 1:  # 第二次循环，第二个数定义为1
             list.append(1)
         else:
             list.append(list[i - 1] + list[i - 2])

@@ -39,8 +39,9 @@ print("*" * 25, "匿名函数使用场合：函数名作为其他函数的参数
 
 def ccc(a, func):
     print("这是函数bbb的第一个参数a:", a)
-    r = func(8)
+    r = func(9)
     print("------------", r)
 
 
 ccc(6, lambda x: x ** 2)
+ccc(9, lambda x: x if x % 2 == 0 else x + 2)
