@@ -5,12 +5,13 @@ import os
 """
 OS模块：主要对文件和目录进行操作
 常用方法：
-os.mdkir()：创建目录
+os.mkdir()：创建目录
 os.removedirs()：删除目录或文件
 os.getcwd()：获取当前目录
 os.path.exists(dir or file)：判断文件或目录是否存在
 os.path.dirname(__file__)：返回当前文件所在目录的绝对路径
 os.path.join(str1,str2)：字符串拼接
+os.path.isabs("路径")：是否绝对路径，返回bool类型（当前目录可以直接写；../表示当前目录的上级目录；../../表示当前目录的上上级目录，类推）
 """
 # 获取当前文件所在目录的完整路径，返回一个字符串
 print(os.path.dirname(__file__))
