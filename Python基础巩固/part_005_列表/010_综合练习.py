@@ -33,11 +33,15 @@ while True:
     elif choice == "3":
         print("欢迎使用'查询角色'功能：")
         select_role_name = input("\t请输入要查询的角色名称：")
+        all_role_name = []
         for j in all_role:
-            if select_role_name in j:
-                print("\t当前输入的角色'{}'存在于系统中！".format(select_role_name))
-                print("{}{}{}".format("角色名称".center(10), "角色性别".center(10), "角色职业".center(10)))
-                print(j[0].center(10), j[1].center(10), j[2].center(10))
+            all_role_name.append(j[0])
+        if select_role_name in all_role_name:
+            print("\t当前输入的角色'{}'存在于系统中：".format(select_role_name))
+            print("\t{}{}{}".format("角色名称".center(10), "角色性别".center(10), "角色职业".center(10)))
+            for js in all_role:
+                if select_role_name in js:
+                    print("\t", js[0].center(10), js[1].center(10), js[2].center(10))
         else:
             print("\t当前输入的角色'{}'不存在于系统中！".format(select_role_name))
     elif choice == "4":
@@ -56,6 +60,7 @@ while True:
             print("\t当前输入的角色'{}'不存在于系统中！".format(delete_role_name))
     elif choice == "5":
         print("欢迎使用'查看所有角色'功能：")
+        print(all_role)
         print("{}{}{}".format("角色名称".center(10), "角色性别".center(10), "角色职业".center(10)))
         for i in all_role:
             print(i[0].center(10), i[1].center(10), i[2].center(10))
