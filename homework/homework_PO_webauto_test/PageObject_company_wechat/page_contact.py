@@ -60,7 +60,7 @@ class PageContact(PageBase):
                     self.br.find_element(By.CSS_SELECTOR, '.js_next_page').click()
                     sleep(2)
                     member_middle_end = self.br.find_elements(By.CSS_SELECTOR,
-                                                          '#member_list>.member_colRight_memberTable_tr>.member_colRight_memberTable_td:nth-child(5)')
+                                                              '#member_list>.member_colRight_memberTable_tr>.member_colRight_memberTable_td:nth-child(5)')
                     print(member_middle_end)
                     for member in member_middle_end:
                         phone_list.append(member.text)
