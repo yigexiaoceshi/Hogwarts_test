@@ -9,7 +9,7 @@ list1.append("bb")  # list.append(a),a可以是列表支持的一切数据类型
 print(list1)
 
 print("*" * 20, "指定索引位置添加元素：list.insert(index,'a')", "*" * 20)
-list1.insert(2, 8)  # 索引2的位置插入元素8，原来的索引2元素往后移动
+list1.insert(2, 8)  # 索引2的位置插入元素8，原来索引为2的元素往后移动
 print(list1)
 
 print("*" * 20, "列表的合并1：list_a + list_b", "*" * 20)
