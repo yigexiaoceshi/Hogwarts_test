@@ -29,7 +29,8 @@ while True:
                 k[2] = input("\t请输入新的角色职业：")
                 print("\t当前角色'{}'已修改成功！".format(update_role_name))
             else:
-                print("\t当前输入的角色'{}'不存在于系统中，无法修改！".format(update_role_name))
+                print("\t当前输入的角色'{}'不存在于系统中，无法修改！".format(
+                    update_role_name))  # 所查的名称不是第一个元素时，会走该分支，解决方法参考elif choice == "2"
     elif choice == "3":
         print("欢迎使用'查询角色'功能：")
         select_role_name = input("\t请输入要查询的角色名称：")
@@ -56,8 +57,8 @@ while True:
                     print("\t角色'{}'已成功被删除".format(delete_role_name))
                 else:
                     pass
-        else:
-            print("\t当前输入的角色'{}'不存在于系统中！".format(delete_role_name))
+            else:
+                print("\t当前输入的角色'{}'不存在于系统中！".format(delete_role_name))  # 所查的名称不是第一个元素时，会走该分支，解决方法参考elif choice == "3"
     elif choice == "5":
         print("欢迎使用'查看所有角色'功能：")
         print(all_role)
