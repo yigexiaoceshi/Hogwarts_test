@@ -14,7 +14,7 @@ list_a = list(tuple_a)
 print(list_a)
 
 # 列表里新增元素
-list_a.append("fjosdfjdsjfosdjfodsfj")
+list_a.append("a")
 print(list_a)
 
 # 列表重新转换为元组
