@@ -36,19 +36,19 @@ print(set5)
 print("*" * 20, "删除单个元素：set.remove(元素)，元素不存在会报错(KeyError)", "*" * 20)
 set6 = {'NDFq', 'YV0D', 'otwy', 's23k', 'GadY'}
 set6.remove('s23k')  # 要删除的元素不存在时会报错
-print(set6)
+print('set6:', set6)
 
 print("*" * 20, "删除单个元素：set.discard(元素)，元素不存在不做任何操作，也不报错", "*" * 20)
 set7 = {'NDFq', 'YV0D', 'otwy', 's23k', 'GadY'}
 set7.discard('s23kKKKKKK')  # 要删除的元素不存在时不会报错
-print(set7)
+print('set7:', set7)
 
 print("*" * 20, "清空整个集合：set.clear()，内存地址还在，未被释放", "*" * 20)
 set8 = {'NDFq', 'YV0D', 'otwy', 's23k', 'GadY'}
 set8.clear()
-print(set8)
+print('清空后的set8:', set8)
 set8.add("重新添加元素")
-print(set8)
+print('set8:', set8)
 
 print("*" * 20, "删除整个集合：del set，释放内存空间", "*" * 20)
 # del用来操作删除元素，都是根据下标(有序数列)或者key(字典)来删除的，集合的特性无需且无key所以无法用del删除元素，只能删除整个集合
@@ -58,7 +58,7 @@ del set9
 print("*" * 20, "随机删除任意一个元素：set.pop()", "*" * 20)
 set10 = {'NDFq', 'YV0D', 'otwy', 's23k', 'GadY'}
 set10.pop()
-print(set10)
+print('set10:', set10)
 
 print("*" * 20, "求交集：set.intersection(set1),set和set1相同的元素，也可以使用符号(&)", "*" * 20)
 set11 = {1, 2, 3, 4, 5}
